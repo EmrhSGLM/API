@@ -18,9 +18,9 @@
 
 6) API Testlerinde response doğrulma nasıl yapılır?
    a) TestNG ve JUnit Assert'leri kullanılarak
-   b) assertThat()
-   c) Json Path
-   d) Matchers Class
+   b) Json Path -> JsonPath() json = response.JsonPath();
+   c) Matchers Class
+   d) De-Serialization
    e)
    f)
    g)
@@ -46,9 +46,56 @@ https://reqres.in/api/users
 
 http://dummy.restapiexample.com/api/v1/employee
 
+https://jsonplaceholder.typicode.com/
+
 https://www.gmibank.com/api/authenticate
 
 http://www.gmibank.com/api/tp-customers
 
 
+   /*
+   https://jsonplaceholder.typicode.com/todos/7
+
+   {
+   "userId": 1,
+   "id": 7,
+   "title": "illo expedita consequatur quia in",
+   "completed": false
+}
+    */
+
+
+
+
+
+
+       /*
+       http://www.gmibank.com/api/tp-customers/114351 adresindeki müşteri bilgilerini doğrulayın
+
+    {
+       "firstName": "Della",
+       "lastName": "Heaney",
+       "email": "ricardo.larkin@yahoo.com",
+       "mobilePhoneNumber": "123-456-7893",
+    }
+        */
+
+
+
+
+           /*
+           http://www.gmibank.com/api/tp-customers/43703
+
+           "firstName": "Alda",
+           "lastName": "Monahan",
+           "middleInitial": "Nichelle Hermann Kohler",
+           "email": "com.github.javafaker.Name@7c011174@gmail.com",
+           "mobilePhoneNumber": "909-162-8114",
+           "city": "St Louis",
+           "ssn": "108-53-6655"
+
+           1) MATCHERS CLASS
+           2) JSON PATH
+           3) De-Serialization
+            */
 
