@@ -72,12 +72,10 @@ public class GetRequest20 extends JsonPlaceHolderBaseUrl {
 
         //3.Way De-Serialization
         HashMap<String, Object> actualData = response.as(HashMap.class);
-        Assert.assertEquals(response.statusCode(),expectedData.get("statusCode"));
-        Assert.assertEquals(response.getHeader("via"),expectedData.get("via"));
-        Assert.assertEquals(response.getHeader("server"),expectedData.get("server"));
-        Assert.assertEquals(actualData.get("completed"),expectedData.get("completed"));
-        Assert.assertEquals(actualData.get("userId"),expectedData.get("userId"));
-        Assert.assertEquals(actualData.get("title"),expectedData.get("title"));
+        System.out.println("Actual Data : " + actualData);
+        Assert.assertEquals(expectedData.get("completed"), actualData.get("completed"));
+        Assert.assertEquals(expectedData.get("userId"), actualData.get("userId"));
+        Assert.assertEquals(expectedData.get("title"), actualData.get("title"));
 
 
     }
