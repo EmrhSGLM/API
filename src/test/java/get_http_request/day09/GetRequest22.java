@@ -65,8 +65,6 @@ public class GetRequest22 extends HerOkuAppBaseUrl {
         Assert.assertEquals(((Map)expectedDataTestDataMap.get("bookingdates")).get("checkout"),
                                     ((Map)actualData.get("bookingdates")).get("checkout"));
 
-
-
         //2. JsonPath
         JsonPath json = response.jsonPath();
         Assert.assertEquals(json.getString("firstname"), expectedDataTestDataMap.get("firstname"));
