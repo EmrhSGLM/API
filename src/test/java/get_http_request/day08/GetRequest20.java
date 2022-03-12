@@ -55,9 +55,9 @@ public class GetRequest20 extends JsonPlaceHolderBaseUrl {
         response.then().assertThat().statusCode((Integer)expectedData.get("statusCode")).
                                         headers("via", equalTo(expectedData.get("via")),
                                       "server", equalTo(expectedData.get("server"))).
-                                        body("completed", equalTo(expectedData.get("completed")),
-                                                "userId", equalTo(expectedData.get("userId")),
-                                                "title", equalTo(expectedData.get("title")));
+                                      body("completed", equalTo(expectedData.get("completed")),
+                                      "userId", equalTo(expectedData.get("userId")),
+                                      "title", equalTo(expectedData.get("title")));
 
 
         //2.WAY JSONPATH ILE
@@ -77,8 +77,5 @@ public class GetRequest20 extends JsonPlaceHolderBaseUrl {
         Assert.assertEquals(expectedData.get("userId"), actualData.get("userId"));
         Assert.assertEquals(expectedData.get("title"), actualData.get("title"));
 
-
     }
-
-
 }

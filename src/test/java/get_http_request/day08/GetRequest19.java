@@ -45,6 +45,7 @@ http://dummy.restapiexample.com/api/v1/employees
 
         List<Integer> idList = json.getList("data.findAll{it.id>10}.id");
         //List<Integer> idList = json.getList("data.id.findAll{it.id>10}");
+        // data.findAll{it.id>10}.id => Groovy methodu
         System.out.println("ID List : " + idList);
         // Groovy Java platformu uzerinde calısan bir bilgisayar dilidir.
         //Groovy ile loop kullanmadan response'dan gelen degerlei bir sarta gore alabiliriz
