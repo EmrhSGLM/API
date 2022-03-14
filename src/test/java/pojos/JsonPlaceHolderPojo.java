@@ -12,6 +12,7 @@ public class JsonPlaceHolderPojo {
                 "completed": false
         }
         */
+
     // 1) Degiskenleri private olarak tanımlayacagız.
 
     private int userId;
@@ -20,7 +21,6 @@ public class JsonPlaceHolderPojo {
     private Boolean completed;
 
     // 2) Degiskenlerin degerlendine ulasmak icin getter ve setter olustururuz
-
 
     public int getUserId() {
         return userId;
