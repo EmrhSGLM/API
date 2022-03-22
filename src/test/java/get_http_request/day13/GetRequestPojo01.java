@@ -1,6 +1,7 @@
 package get_http_request.day13;
 
 import base_url.DummyBaseUri;
+import com.google.gson.Gson;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
@@ -60,11 +61,19 @@ public class GetRequestPojo01 extends DummyBaseUri
 
         Assert.assertEquals(expectedData.getStatus(), actual.getStatus() );
         Assert.assertEquals(expectedData.getMessage(), actual.getMessage() );
-        Assert.assertEquals(expectedData.getDataPojo().getEmployee_age(), actual.getDataPojo().getEmployee_age());
-        Assert.assertEquals(expectedData.getDataPojo().getEmployee_name(), actual.getDataPojo().getEmployee_name());
-        Assert.assertEquals(expectedData.getDataPojo().getId(), actual.getDataPojo().getId());
-        Assert.assertEquals(expectedData.getDataPojo().getEmployee_salary(), actual.getDataPojo().getEmployee_salary());
-        Assert.assertEquals(expectedData.getDataPojo().getProfile_image(), actual.getDataPojo().getProfile_image());
+        Assert.assertEquals(expectedData.getData().getEmployee_age(), actual.getData().getEmployee_age());
+        Assert.assertEquals(expectedData.getData().getEmployee_name(), actual.getData().getEmployee_name());
+        Assert.assertEquals(expectedData.getData().getId(), actual.getData().getId());
+        Assert.assertEquals(expectedData.getData().getEmployee_salary(), actual.getData().getEmployee_salary());
+        Assert.assertEquals(expectedData.getData().getProfile_image(), actual.getData().getProfile_image());
+
+
+        // Serialization -> Java yapısındaki datayı JSON formatına donusturur
+        Gson gson = new Gson();
+        String jsonFromJava = gson.toJson(actual);
+        System.out.println("jsonFromJava = " + jsonFromJava);
+        // System.err.println("jsonFromJava = " + jsonFromJava);
+        // Cıktıyı kırmızı yazar Hata mesajlarında kullanılır
 
 
     }

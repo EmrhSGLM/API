@@ -22,7 +22,7 @@ public class DummyPojo {
 
     // 1) private degiskenler olustur
     private String status;
-    private DataPojo dataPojo;
+    private DataPojo data;
     private String message;
 
     // 2) getter and setter
@@ -43,12 +43,12 @@ public class DummyPojo {
         this.message = message;
     }
 
-    public DataPojo getDataPojo() {
-        return dataPojo;
+    public DataPojo getData() {
+        return data;
     }
 
-    public void setDataPojo(DataPojo dataPojo) {
-        this.dataPojo = dataPojo;
+    public void setData(DataPojo data) {
+        this.data = data;
     }
 
     // 3) parametreli ve parametresiz constructor olustur
@@ -57,10 +57,10 @@ public class DummyPojo {
     public DummyPojo() {
     }
 
-    public DummyPojo(String status, DataPojo dataPojo , String message) {
+    public DummyPojo(String status, DataPojo data , String message) {
         this.status = status;
         this.message = message;
-        this.dataPojo = dataPojo;
+        this.data = data;
     }
 
     // 4) toString();
@@ -70,7 +70,7 @@ public class DummyPojo {
         return "DummyPojo{" +
                 "status='" + status + '\'' +
                 ", message='" + message + '\'' +
-                ", dataPojo=" + dataPojo +
+                ", data=" + data +
                 '}';
     }
 }

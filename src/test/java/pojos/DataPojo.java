@@ -67,8 +67,6 @@ public class DataPojo {
     // 3) parametreli ve parametresiz constructor olustur
 
 
-    public DataPojo() {
-    }
 
     public DataPojo(int id, String employee_name, int employee_salary,
                     int employee_age, String profile_image) {
@@ -77,6 +75,9 @@ public class DataPojo {
         this.employee_salary = employee_salary;
         this.employee_age = employee_age;
         this.profile_image = profile_image;
+    }
+
+    public DataPojo() {
     }
 
     // 4) toString() olustur
