@@ -1,4 +1,4 @@
-package tests._09_;
+package tests._09_GET;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;

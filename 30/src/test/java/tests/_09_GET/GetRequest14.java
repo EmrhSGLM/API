@@ -1,5 +1,6 @@
-package tests._09_;
+package tests._09_GET;
 
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
@@ -63,5 +64,25 @@ public class GetRequest14 extends DummyBaseUrl {
         Collections.sort(ages);
 
         Assert.assertEquals(expectedData.get("enKucukYas"), ages.get(0));
+
+        // JsonPath yontemi ile
+        JsonPath json = response.jsonPath();
+
+        // En yuksek maasın 72500 oldugunu,
+        List<Integer> maasListesiJson = json.getList("data.employee_salary");
+        Collections.sort(maasListesiJson);
+
+        Assert.assertEquals(expectedData.get("enYuksekMaas"),maasListesiJson.get(maasListesiJson.size()-1));
+
+        // İkinci en yüksek maaşın 675000
+
+        Assert.assertEquals(expectedData.get("enYuksekIkıncıMaas"),maasListesiJson.get(maasListesiJson.size()-2));
+
+        // En küçük yaşın 19 olduğunu
+        List<Integer> yasListesiJson = json.get("data.employee_age");
+
+        Collections.sort(yasListesiJson);
+        Assert.assertEquals(expectedData.get("enKucukYas"),yasListesiJson.get(0));
+
     }
 }
